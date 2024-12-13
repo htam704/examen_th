@@ -1,3 +1,4 @@
+import 'package:examen_th/screens/listview_screen_th.dart';
 import 'package:examen_th/widgets/custom_text_form_field_th.dart';
 import 'package:flutter/material.dart';
 
@@ -27,11 +28,13 @@ class SigninScreen extends StatelessWidget {
               CustomTextFormField(
                 hintText: 'Contraseña',
                 labelText: 'Contraseña',
-                
+                obscureText: true,
               ),
               SizedBox(height: 30),
               ElevatedButton(
                 onPressed: () {
+                  final route = MaterialPageRoute(builder: (context) => const ListviewScreen());
+                  Navigator.push(context, route);
                 }, 
                 child: SizedBox(
                   width: double.infinity,
