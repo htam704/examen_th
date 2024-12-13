@@ -25,8 +25,8 @@ class CustomTextFormField extends StatelessWidget {
         print('value: $value');
       },
       validator: (value) {
-        if(value!.length < 1) {
-          return 'Completa este campo';
+        if(value!.length < 6) {
+          return 'Mínimo 6 caracteres';
         }
       },
       autovalidateMode: AutovalidateMode.onUserInteraction,
