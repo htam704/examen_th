@@ -30,9 +30,23 @@ class SigninScreen extends StatelessWidget {
                 
               ),
               SizedBox(height: 30),
+              ElevatedButton(
+                onPressed: () {
+                }, 
+                child: SizedBox(
+                  width: double.infinity,
+                  child: Center(child: Text('Enviar'))
+                  )
+              )
             ],
           ),
         ),
+        floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.close),
+        onPressed: () => Navigator.pop(context)
+      ),
     );
   }
+
+  
 }
